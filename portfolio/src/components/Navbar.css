@@ -34,6 +34,6 @@
   }
   
   .navbar a:hover {
-    color: var(--active-color);
+    color: var(--hover-color);
   }
   
