@@ -1,14 +1,17 @@
 /* Navbar.css */
 .navbar {
-    background-color: #FFFFFF;
-    color: var(--text-color);
+    background-color: #1c1e1f;
+    color: #FFFFFF;
     padding: 10px 0;
   }
   
-  .container {
+  .navbar .container {
     max-width: 960px;
     margin: 0 auto;
     padding: 0 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
   
   .navbar-logo {

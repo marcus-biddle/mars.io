@@ -1,13 +1,13 @@
 /* Home.css */
 .home {
-  height: 50vh;
-    padding: 100px 0;
-    text-align: center;
-    background-color: #1c1e1f;
-  }
+  height: 60vh;
+  padding: 100px 0;
+  text-align: center;
+  background-color: #1c1e1f;
+}
   
   .home h1 {
-    font-size: 36px;
+    font-size: 50px;
     font-weight: bold;
     line-height: normal;
     color: white;
@@ -21,26 +21,25 @@
     display: flex;
     justify-content: center;
     align-content: center;
-    line-height: 0;
   }
   
   .desc p {
     font-size: 18px;
     font-weight: lighter;
     text-transform: uppercase;
-    
+    line-height: 0;
   }
 
   .divider {
     padding: 0 16px;
-    color: white;
+    color: #848484c5;
   }
 
   .home p:first-child {
-    color: #53dbf7;
+    color: #53dcf75a;
   }
   .home p:last-child {
-    color: #53dbf7;
+    color: #53dcf75a;
   }
   
   @media (max-width: 768px) {
