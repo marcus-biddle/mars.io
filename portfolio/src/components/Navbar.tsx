@@ -5,7 +5,6 @@ import './Navbar.css';
 const Navbar = () => {
   return (
     <nav className="navbar">
-      <div className="container">
         <div className="navbar-logo">
           Mars.io
         </div>
@@ -23,7 +22,6 @@ const Navbar = () => {
             <a href="#contact">Contact</a>
           </li>
         </ul>
-      </div>
     </nav>
   );
 };

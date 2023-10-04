@@ -1,45 +1,68 @@
 /* Home.css */
 .home {
-  height: 60vh;
-  padding: 100px 0;
+  height: 80vh;
   text-align: center;
-  background-color: #1c1e1f;
+  background-color: #8B8378;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
   
   .home h1 {
     font-size: 50px;
     font-weight: bold;
     line-height: normal;
-    color: white;
+    color: #000000;
   }
 
-  .container span {
-    color: #53dbf7;
+  .home span {
+    color: #f7dc53b3;
   }
 
   .desc {
     display: flex;
     justify-content: center;
     align-content: center;
+    margin-right: 8px;
   }
   
   .desc p {
     font-size: 18px;
-    font-weight: lighter;
     text-transform: uppercase;
     line-height: 0;
+    padding: 0 8px;
   }
 
   .divider {
-    padding: 0 16px;
-    color: #848484c5;
+    color: #333333;
   }
 
   .home p:first-child {
-    color: #53dcf75a;
+    color: #333333;
   }
   .home p:last-child {
-    color: #53dcf75a;
+    color: #333333;
+  }
+
+  .icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 56px; 
+  }
+
+  .icon-container div {
+    height: 3rem;
+    width: 3rem;
+    margin: 0 16px;
+    padding: 10px;
+    border-radius: 8px;
+  }
+
+  .icon-container div:hover {
+    background-color: #33333362;
+    cursor: pointer;
   }
   
   @media (max-width: 768px) {

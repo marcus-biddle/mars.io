@@ -1,22 +1,26 @@
-import React from 'react'
+import { BsGithub, BsLinkedin } from 'react-icons/bs'
 import './Home.css';
 
 const Home = () => {
   return (
     <section id='home' className='home'>
-        <div className='container'>
-          
             <h1 className=''>Marcus <span>'Mars'</span> Biddle</h1>
             <div className='desc'>
-          <p>QA Engineer</p>
-          <p className='divider'>|</p>
-          <p>Web Developer</p>
-          </div>
-            {/* Social Media Container */}
-            <div>
-
+              <p>Self-Taught</p>
+              <p className='divider'> |</p>
+              <p>Innovator</p>
             </div>
-        </div>
+
+          {/* Social Media Container */}
+          <div className='icon-container'>
+            <div>
+              <BsGithub style={{ height: '100%', width: '100%'}} />
+            </div>
+            <div>
+              <BsLinkedin style={{ height: '100%', width: '100%'}} />
+            </div>
+            
+          </div>
     </section>
   )
 }
