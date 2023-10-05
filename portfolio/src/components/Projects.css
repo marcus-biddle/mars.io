@@ -5,6 +5,20 @@
     position: relative;
     background-color: var(--secondary-bg);
   }
+
+  .projects-title {
+    width: 100%;
+    text-align: left;
+    padding-left: 56px;
+  }
+
+  .project-section span {
+    color: var(--highlight);
+  }
+
+  .project-section h2 {
+    color: #FFFFFF;
+  }
   
   .projects-container {
     display: flex;
@@ -12,7 +26,32 @@
   }
 
   .projects-header {
-    width: 100%;
+    width: 80%;
+    text-align: left;
+    padding-left: 56px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .projects-header button {
+    background-color: transparent;
+    border: 1px solid var(--highlight);
+    color: #FFFFFF;
+    padding: 12px 32px;
+    font-size: 20px;
+  }
+
+  .projects-header button:hover {
+    background-color: var(--highlight);
+  }
+
+  .projects-header h3 {
+    font-weight: 400;
+    letter-spacing: 1.05px;
+    line-height: 32px;
+    color: #FFFFFF;
+    font-size: 24px
   }
   
   .project {
@@ -71,5 +110,39 @@
   .card-container::-webkit-scrollbar-thumb {
     background-color: var(--highlight); /* Set scrollbar thumb color */
     border-radius: 5px; /* Round the scrollbar thumb */
+  }
+
+  @media (max-width: 790px) {
+    .projects-container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+      }
+
+      .card {
+        min-width: 250px; /* Adjust the width of each card as needed */
+        min-height: 325px; /* Adjust the height of each card as needed */
+        margin-right: 56px; /* Add spacing between cards */
+        background-color: #f0f0f0; /* Set card background color */
+        border: 1px solid #ddd; /* Add a border for cards */
+        display: inline-block; /* Prevent vertical alignment issues */
+        margin-bottom: 16px;
+        border-radius: 8px;
+        scroll-snap-align: start;
+      }
+
+      .projects-header {
+        margin-bottom: 56px;
+        width: 100%;
+        padding-left: 24px;
+      }
+
+      .projects-header h3 {
+        font-size: 20px
+      }
+
+      .projects-title {
+        padding-left: 24px;
+      }
   }
   

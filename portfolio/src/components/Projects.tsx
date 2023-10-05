@@ -1,6 +1,5 @@
 import { useRef } from 'react';
 import './Projects.css';
-import useHorizontalScrollSnap from '../hooks/useHorizontalScrollSnap';
 
 // const projects = [
 //     {
@@ -35,26 +34,26 @@ import useHorizontalScrollSnap from '../hooks/useHorizontalScrollSnap';
 //   ];
 
 const Projects = () => {
-    const containerRef = useRef(null);
-    useHorizontalScrollSnap(containerRef, '.card');
+    const containerRef = useRef<HTMLDivElement | null>(null);
+    // useHorizontalScrollSnap(containerRef);
 
     return (
         <section data-section id='projects' className="project-section">
-            <h2>My Projects</h2>
+            <div className='projects-title'>
+                <h2>Featured <span>projects</span></h2>
+            </div>
             <div className='projects-container'>
                 <div className='projects-header'>
-                    <h2>My projects</h2>
+                    <h3>Take a look at what I've created <br/>and the tools used <br />to craft them</h3>
+                    <a href="https://github.com/marcus-biddle">
+                        <button>View Repositories</button>
+                    </a>
                 </div>
                 <div ref={containerRef} className="card-container">
                     <div className="card">Card 1</div>
-                    <div className="card">Card 2</div>
-                    <div className="card">Card 3</div>
-                    <div className="card">Card 1</div>
-                    <div className="card">Card 2</div>
-                    <div className="card">Card 3</div>
-                    <div className="card">Card 1</div>
-                    <div className="card">Card 2</div>
-                    <div className="card">Card 3</div>
+                    <div className="card" >Card 2</div>
+                    <div className="card" >Card 3</div>
+                    <div className="card" >Card 4</div>
                 </div>
             </div>
             

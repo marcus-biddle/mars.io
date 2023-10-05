@@ -1,46 +1,44 @@
 import { useEffect, useRef } from 'react';
 
-function useHorizontalScrollSnap(
-  containerRef: React.RefObject<HTMLElement>,
-  cardSelector: string
-) {
+function useHorizontalScrollSnap(containerRef: React.RefObject<HTMLElement>) {
   const observer = useRef<IntersectionObserver | null>(null);
 
   useEffect(() => {
     const container = containerRef.current;
-    const cards = container?.querySelectorAll(cardSelector);
 
-    if (!container || !cards?.length) {
+    if (!container) {
       return;
     }
 
-    observer.current = new IntersectionObserver(
-      (entries) => {
-        const visibleCard = entries.find((entry) => entry.isIntersecting);
+    let isScrolling = false;
 
-        if (visibleCard) {
-          const card = visibleCard.target as HTMLElement; // Typecast to HTMLElement
-          container.scrollTo({
-            left: card.offsetLeft,
-            behavior: 'smooth',
-          });
-        }
-      },
-      {
-        root: container,
-        threshold: 0.5,
-        rootMargin: '0px',
+    const handleScroll = () => {
+      if (!isScrolling) {
+        isScrolling = true;
+        const scrollLeft = container.scrollLeft;
+        const cardWidth = container.clientWidth; // Adjust this based on card size
+
+        // Calculate the nearest card index
+        const nearestCardIndex = Math.round(scrollLeft / cardWidth);
+
+        // Scroll to the nearest card's position
+        container.scrollTo({
+          left: nearestCardIndex * cardWidth,
+          behavior: 'smooth',
+        });
+
+        setTimeout(() => {
+          isScrolling = false;
+        }, 300); // Adjust the delay as needed to control snapping frequency
       }
-    );
+    };
 
-    cards.forEach((card) => {
-      observer.current?.observe(card);
-    });
+    container.addEventListener('scroll', handleScroll);
 
     return () => {
-      observer.current?.disconnect();
+      container.removeEventListener('scroll', handleScroll);
     };
-  }, [containerRef, cardSelector]);
+  }, [containerRef]);
 
   return observer.current;
 }
