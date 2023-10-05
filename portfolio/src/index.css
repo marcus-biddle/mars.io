@@ -16,8 +16,9 @@ body {
 }
 :root {
   --main-bg: #14141c;
-  --highlight: #155b4d;
+  --secondary-bg: #1d1d25;
+  --highlight: #329d87;
   --logo: #329d87;
-  --p-text: #626367;
+  --p-text: #a2a3ab;
   --header-text: #ffffff;
 }

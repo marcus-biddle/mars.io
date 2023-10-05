@@ -7,11 +7,12 @@ import WorkExperience from './components/WorkExperience'
 function App() {
 
   return (
-    <div style={{ display: 'flex', flexDirection: 'column'}}>
+    <div style={{ display: 'flex', flexDirection: 'column', backgroundColor: '#14141c'}}>
       <Navbar />
       <Home />
-      <WorkExperience />
       <Projects />
+      <WorkExperience />
+      
     </div>
   )
 }

@@ -1,6 +1,6 @@
 /* Navbar.css #1c1e1f*/
 .navbar {
-    background-color: var(--main-bg);
+    background-color: transparent;
     position: sticky;
     top: 0;
     z-index: 100;

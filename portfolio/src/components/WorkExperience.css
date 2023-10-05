@@ -1,6 +1,6 @@
 .workexp {
     position: relative;
-    background-color: #f0e7db;
+    background-color: var(--secondary-bg);
     min-height: 100vh;
     overflow: hidden;
 }

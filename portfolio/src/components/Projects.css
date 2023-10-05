@@ -3,13 +3,16 @@
     padding: 20px;
     min-height: 100vh;
     position: relative;
+    background-color: var(--secondary-bg);
   }
   
   .projects-container {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
+    width: 100%;
+  }
+
+  .projects-header {
+    width: 100%;
   }
   
   .project {
@@ -36,5 +39,37 @@
     text-decoration: none;
     color: #007bff;
     font-weight: bold;
+  }
+  
+
+  .card-container {
+    display: flex; /* Use flex layout to arrange cards in a row */
+    overflow-x: auto; /* Enable horizontal scrolling */
+    white-space: nowrap; /* Prevent cards from wrapping to the next line */
+    width: 100%;
+    scroll-snap-type: x mandatory;
+  }
+  
+  .card {
+    min-width: 500px; /* Adjust the width of each card as needed */
+    min-height: 325px; /* Adjust the height of each card as needed */
+    margin-right: 56px; /* Add spacing between cards */
+    background-color: #f0f0f0; /* Set card background color */
+    border: 1px solid #ddd; /* Add a border for cards */
+    display: inline-block; /* Prevent vertical alignment issues */
+    margin-bottom: 16px;
+    border-radius: 8px;
+    scroll-snap-align: start;
+  }
+  
+  /* Style for scrollbar (optional) */
+  .card-container::-webkit-scrollbar {
+    width: 10px; /* Set scrollbar width */
+    cursor: pointer;
+  }
+  
+  .card-container::-webkit-scrollbar-thumb {
+    background-color: var(--highlight); /* Set scrollbar thumb color */
+    border-radius: 5px; /* Round the scrollbar thumb */
   }
   
