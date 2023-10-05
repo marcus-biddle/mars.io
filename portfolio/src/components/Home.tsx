@@ -3,7 +3,7 @@ import './Home.css';
 
 const Home = () => {
   return (
-    <section id='home' className='home'>
+    <section data-section id='home' className='home'>
             <h1 className=''>Marcus <span>'Mars'</span> Biddle</h1>
             <div className='desc'>
               <p>Self-Taught</p>

@@ -1,20 +1,20 @@
 /* Navbar.css #1c1e1f*/
 .navbar {
-    background-color: #8B8378;
-    color: #FFFFFF;
-    position: relative;
+    background-color: var(--main-bg);
+    position: sticky;
+    top: 0;
+    z-index: 100;
     max-width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 16px 80px;
-    height: 100%;
   }
   
   .navbar-logo {
     font-size: 24px;
     font-weight: bold;
-    color: #f7db53;
+    color: var(--logo);
     cursor: pointer;
   }
   
@@ -32,15 +32,18 @@
   
   .navbar a {
     text-decoration: none;
-    color: #000000;
+    color: var(--header-text);
     font-weight: bold;
     padding: 3px 8px;
-    border-radius: 8px;
   }
   
-  .navbar a:hover {
+  /* .navbar a:hover {
     background-color: #00000027;
     color: #f7dc53b3;
+  } */
+
+  .navbar .active {
+    border-bottom: 2px solid var(--highlight);
   }
   
   @media (max-width: 768px) {

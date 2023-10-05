@@ -14,3 +14,10 @@ body {
   margin: 0;
   padding: 0;
 }
+:root {
+  --main-bg: #14141c;
+  --highlight: #155b4d;
+  --logo: #329d87;
+  --p-text: #626367;
+  --header-text: #ffffff;
+}
