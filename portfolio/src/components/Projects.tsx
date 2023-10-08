@@ -40,7 +40,7 @@ const Projects = () => {
     return (
         <section data-section id='projects' className="project-section">
             <div className='projects-title'>
-                <h2>Featured <span>projects</span></h2>
+                <h2>Featured <span>Projects</span></h2>
             </div>
             <div className='projects-container'>
                 <div className='projects-header'>

@@ -3,33 +3,45 @@ import { useEffect, useRef, useState } from 'react';
 type IntersectionObserverOptions = IntersectionObserverInit;
 
 function useIntersectionObserver(
-  targetElements: Element[],
+  initialTargetElements: Element[], // Pass an initial set of target elements here
   options: IntersectionObserverOptions
-): string | null {
+): { activeSection: string | null; updateTargetElements: (newElements: Element[]) => void } {
   const [activeSection, setActiveSection] = useState<string | null>(null);
   const observer = useRef<IntersectionObserver | null>(null);
 
+  console.log('init',initialTargetElements);
+  const [targetElements, setTargetElements] = useState<Element[]>(initialTargetElements); // Use the initialTargetElements
+
   useEffect(() => {
+    console.log('useEffect')
     observer.current = new IntersectionObserver((entries) => {
-      const visibleSection = entries.find((entry) => entry.isIntersecting)?.target as HTMLElement;
+      console.log('Intersection Observer triggered'); // Add this log
+      const visibleSection = entries.find((entry) => entry.isIntersecting)?.target;
       if (visibleSection) {
+        console.log('Visible section:', visibleSection.id); // Add this log
         setActiveSection(visibleSection.id);
-        console.log(visibleSection.id)
       }
     }, options);
 
-    targetElements.forEach((element) => {
+    console.log('target',targetElements);
+    initialTargetElements.forEach((element) => {
       observer.current?.observe(element);
     });
 
     return () => {
-      targetElements.forEach((element) => {
+      initialTargetElements.forEach((element) => {
         observer.current?.unobserve(element);
       });
     };
-  }, [targetElements, options]);
+  }, [initialTargetElements, options]);
 
-  return activeSection;
+  // Function to update targetElements and store in local storage
+  const updateTargetElements = (newElements: Element[]) => {
+    setTargetElements(newElements);
+    localStorage.setItem('targetElements', JSON.stringify(newElements));
+  };
+
+  return { activeSection, updateTargetElements };
 }
 
 export default useIntersectionObserver;
