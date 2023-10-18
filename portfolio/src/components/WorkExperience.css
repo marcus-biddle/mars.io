@@ -2,9 +2,43 @@
     position: relative;
     background-color: var(--secondary-bg);
     min-height: 100vh;
-    overflow: hidden;
+    padding: 56px;
+    padding-top: 56px;
 }
 
+.exp-title {
+    width: 100%;
+    text-align: left;
+    padding-left: 20px;
+    color: #FFFFFF;
+  }
+
+  .exp-title span {
+    color: var(--highlight);
+  }
+
+  .workexp li {
+    color: #FFFFFF;
+    padding: 2px 0;
+    font-size: 18px
+  }
+.time-header {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: baseline;
+}
+
+.time-header span {
+    color: var(--highlight);
+    font-weight: 700;
+}
+
+.divider {
+    border-bottom: 1px solid var(--highlight);
+    margin: 0 20px;
+    width: 100%;
+}
 .workexp h1 {
     text-align: center;
     padding: 36px;

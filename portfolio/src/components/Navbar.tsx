@@ -14,7 +14,7 @@ const Navbar = () => {
     
   }, []); // Run this effect only once when the component mounts
 
-  const { activeSection, updateTargetElements } = useIntersectionObserver(
+  const { activeSection } = useIntersectionObserver(
     elements,
     { threshold: 0.5 }
   );
@@ -36,11 +36,11 @@ const Navbar = () => {
         <li className={active === 'home' ? 'active' : ''}>
           <a href="#home">Home</a>
         </li>
-        <li className={active === 'experience' ? 'active' : ''}>
-          <a href="#experience">Experience</a>
-        </li>
         <li className={active === 'projects' ? 'active' : ''}>
           <a href="#projects">Projects</a>
+        </li>
+        <li className={active === 'experience' ? 'active' : ''}>
+          <a href="#experience">Experience</a>
         </li>
         <li className={active === 'contact' ? 'active' : ''}>
           <a href="#contact">Contact</a>

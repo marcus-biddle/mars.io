@@ -3,7 +3,62 @@ import './WorkExperience.css';
 const WorkExperience = () => {
   return (
     <div data-section id={'experience'} className='workexp'>
-        <h1>Work Experience</h1>
+        <div className='exp-title'>
+            <h2>Relevant <span>Experience</span></h2>
+        </div>
+        <div>
+            <div className='time-header'>
+                <div className='divider' />
+                <span>2023</span>
+                <div className='divider' />
+            </div>
+            <div>
+                <ul>
+                    <li>There's not a lot of room for growth in the company after the initial year of training. I spent much of this time figuring out my future and working on more complex projects.</li>
+                    <li>Began looking for new opportunities to continue growing as an individual.</li>
+                </ul>
+            </div>
+        </div>
+        <div>
+            <div className='time-header'>
+                <div className='divider' />
+                <span>2022</span>
+                <div className='divider' />
+            </div>
+            <div>
+                <ul>
+                    <li>Landed my first role as a Quality Assurance Engineer for an established software consulting company.</li>
+                    <li>I drastically improved my skills and expanded my knowledge set into more areas in web development. </li>
+                </ul>
+            </div>
+        </div>
+        <div>
+            <div className='time-header'>
+                <div className='divider' />
+                <span>2021</span>
+                <div className='divider' />
+            </div>
+            <div>
+                <ul>
+                    <li>I had moved to a new city where I was sleeping out of my car and working at a restuarant. I continued to practice coding and leetcode problems at the nearby university library or at friends houses.</li>
+                    <li>A few months into the year, I became a Lead Manager for the restuarant and moved into an apartment with my coworkers. Shout out to everyone that's helped me up to this point!</li>
+                </ul>
+            </div>
+        </div>
+        <div>
+            <div className='time-header'>
+                <div className='divider' />
+                <span>2020</span>
+                <div className='divider' />
+            </div>
+            <div>
+                <ul>
+                    <li>Graduated from University of California, Riverside</li>
+                    <li>With covid lockdown being in full effect, I began teaching myself about different OS and creating small projects with Python while working as an Instacart driver.</li>
+                </ul>
+            </div>
+        </div>
+        {/* <h1>Work Experience</h1>
         <div className='timeline'>
             <div className='left-box'>
                 <div className='year-btn'>
@@ -61,7 +116,7 @@ const WorkExperience = () => {
                     <p>Unsure of what the futre holds</p>
                 </div>
             </div>
-        </div>
+        </div> */}
     </div>
   )
 }
