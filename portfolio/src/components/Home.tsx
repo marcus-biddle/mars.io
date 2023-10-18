@@ -5,7 +5,7 @@ const Home = () => {
     <section data-section id='home' className='home'>
       <div className='header-section'>
         <h1>
-          Hello, I'm <span>Mars</span>
+          Hello, I'm <span>Marcus</span>.
           <br/>
           Welcome to my page.
         </h1>

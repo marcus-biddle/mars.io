@@ -91,15 +91,16 @@
   }
   
   .card {
-    min-width: 500px; /* Adjust the width of each card as needed */
-    min-height: 325px; /* Adjust the height of each card as needed */
-    margin-right: 56px; /* Add spacing between cards */
-    background-color: #f0f0f0; /* Set card background color */
-    border: 1px solid #ddd; /* Add a border for cards */
+    min-width: 500px;
+    min-height: 600px; 
+    margin-right: 56px; 
+    background-color: transparent;
+    border: 1px solid var(--highlight); /* Add a border for cards */
     display: inline-block; /* Prevent vertical alignment issues */
     margin-bottom: 16px;
     border-radius: 8px;
     scroll-snap-align: start;
+    white-space: normal;
   }
   
   /* Style for scrollbar (optional) */
@@ -111,6 +112,91 @@
   .card-container::-webkit-scrollbar-thumb {
     background-color: var(--highlight); /* Set scrollbar thumb color */
     border-radius: 5px; /* Round the scrollbar thumb */
+  }
+
+  .card h3 {
+    color: #FFFFFF;
+    text-transform: uppercase;
+    letter-spacing: 1.05px;
+    font-weight: 400;
+  }
+
+  .card img {
+    width: 100%;
+    height: 150px;
+    display: block;
+    object-fit: cover;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+
+  .card-container img:hover {
+    opacity: .75;
+  }
+
+  .img-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Creates a 2x2 grid */
+    gap: 12px; /* Adjust the gap between grid items as needed */
+    margin-top: 16px;
+  }
+
+  .img-container div:nth-child(even) {
+    padding-right: 12px;
+  }
+
+  .img-container div:nth-child(odd) {
+    padding-left: 12px;
+  }
+
+  .project-modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+
+  .modal-image {
+    max-width: 90%;
+    max-height: 80%;
+  }
+
+  .close {
+    position: absolute;
+    top: 75px;
+    right: 35px;
+    font-size: 30px;
+    cursor: pointer;
+  }
+  
+  .close:hover {
+    color: red;
+  }
+  
+  .card-desc {
+    max-width: 100%;
+    font-size: 15px;
+    white-space: normal;
+  }
+
+  .card span {
+    color: var(--p-text);
+    font-size: 12px;
+    font-weight: 300;
+    padding: 4px;
+  }
+
+  .card p {
+    color: #FFFFFF;
+    font-size: 16px;
+    
   }
 
   @media (max-width: 790px) {
