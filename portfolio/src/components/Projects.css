@@ -98,6 +98,7 @@
     border: 1px solid var(--highlight); /* Add a border for cards */
     display: inline-block; /* Prevent vertical alignment issues */
     margin-bottom: 16px;
+    padding: 16px;
     border-radius: 8px;
     scroll-snap-align: start;
     white-space: normal;
@@ -118,7 +119,7 @@
     color: #FFFFFF;
     text-transform: uppercase;
     letter-spacing: 1.05px;
-    font-weight: 400;
+    font-weight: 300;
   }
 
   .card img {
@@ -140,6 +141,7 @@
     grid-template-columns: repeat(2, 1fr); /* Creates a 2x2 grid */
     gap: 12px; /* Adjust the gap between grid items as needed */
     margin-top: 16px;
+    margin-bottom: 32px;
   }
 
   .img-container div:nth-child(even) {
@@ -196,7 +198,32 @@
   .card p {
     color: #FFFFFF;
     font-size: 16px;
-    
+  }
+
+  .btn-container {
+  }
+
+  .btn-container button {
+    background-color: transparent;
+    border: none;
+    color: var(--highlight);
+    text-decoration: underline var(--highlight);
+    font-size: 16px;
+    padding: 8px;
+    cursor: pointer;
+  }
+
+  .btn-container button:hover {
+    color: #FFFFFF;
+    text-decoration: underline #FFFFFF;
+  }
+
+  .tool-container span {
+    color: var(--highlight);
+    border: 1px solid var(--highlight);
+    border-radius: 8px;
+    padding: 4px;
+    margin: 0 4px;
   }
 
   @media (max-width: 790px) {

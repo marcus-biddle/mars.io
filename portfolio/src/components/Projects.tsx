@@ -5,37 +5,19 @@ import pokeHome from '../assets/poke_home.jpeg';
 import pokeClp from '../assets/poke_clp.jpeg';
 import pokePdp from '../assets/poke_pdp.jpeg';
 
-// const projects = [
-//     {
-//       id: 1,
-//       title: 'Project 1',
-//       description: 'Description of Project 1',
-//       imageUrl: 'project1.jpg',
-//       link: 'https://example.com/project1',
-//     },
-//     {
-//       id: 2,
-//       title: 'Project 2',
-//       description: 'Description of Project 2',
-//       imageUrl: 'project2.jpg',
-//       link: 'https://example.com/project2',
-//     },
-//     {
-//         id: 3,
-//         title: 'Project 1',
-//         description: 'Description of Project 1',
-//         imageUrl: 'project1.jpg',
-//         link: 'https://example.com/project1',
-//       },
-//       {
-//         id: 4,
-//         title: 'Project 2',
-//         description: 'Description of Project 2',
-//         imageUrl: 'project2.jpg',
-//         link: 'https://example.com/project2',
-//       },
-//     // Add more projects as needed
-//   ];
+const PROJECTS = [
+    {
+        title: 'Fuax Ecommerce Store',
+        caption: 'In a world where Pokemon exists, this store has every type you need for battle!',
+        images: [
+            pokeHome, pokeClp, pokePdp, pokeCart
+        ],
+        tools: [
+            'React', 'API', 'Typescript'
+        ],
+        description: 'This project uses an API found online to grab data for the store. It\'s integrated with a third party service, Stripe, for transactions.'
+    }
+  ];
 
 const Projects = () => {
     const containerRef = useRef<HTMLDivElement | null>(null);
@@ -67,6 +49,31 @@ const Projects = () => {
                     </a>
                 </div>
                 <div ref={containerRef} className="card-container">
+                    {PROJECTS.map((project) => {
+                        return (
+                            <div className="card">
+                                <h3>{project.title}</h3>
+                                <span>{project.caption}</span>
+                                <div className='img-container'>
+                                    {project.images.map((img) => (
+                                        <div onClick={() => openModal(img)}>
+                                            <img src={img} alt='' />
+                                        </div>
+                                    ))}
+                                </div>
+                                <div className='tool-container'>
+                                    {project.tools.map((tool) => (
+                                        <span>{tool}</span>
+                                    ))}
+                                </div>
+                                <p>{project.description}</p>
+                                <div className='btn-container'>
+                                    <button>Demo</button>
+                                    <button>View Code</button>
+                                </div>
+                            </div>
+                        )
+                    })}
                     <div className="card">
                         <h3>Fuax Ecommerce Store</h3>
                         <span>In a world where Pokemon exists, this store has every type you need for battle!</span>
@@ -84,8 +91,13 @@ const Projects = () => {
                                 <img src={pokeCart} alt='' />
                             </div>
                         </div>
+                        <div className='tool-container'>
+                            <span>React</span>
+                            <span>API</span>
+                            <span>Typescript</span>
+                        </div>
                         <p>This project uses an API found online to grab data for the store. It's integrated with a third party service, Stripe, for transactions. </p>
-                        <div>
+                        <div className='btn-container'>
                             <button>Demo</button>
                             <button>View Code</button>
                         </div>
